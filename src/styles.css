@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/angular2-busy/build/style/busy.css';
+
+.ng-busy, .ng-busy > *, .ng-busy > ng-component > * {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ng-busy-default-sign {
+    position: relative;
+    display: inline-block;
+    z-index: 1003;
+    padding: 12px 14px;
+    border: none;
+    border-top: 0;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    background: transparent;
+    color: #c71212;
+}
+
+.ng-busy-default-spinner {
+    position: relative;
+    display: inline-block;
+    width: 25rem;
+    height: 20rem;
+    vertical-align: middle;
+}

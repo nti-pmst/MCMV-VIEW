@@ -1,0 +1,22 @@
+<div [ngBusy]="{busy: sorteioSubscription, message: ''}" class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="list-group" style="height: 100vh; overflow-y: hidden">
+        <li *ngFor="let pessoa of pessoasApresentadas" class="list-group-item">
+          <h3>{{pessoa.nome | uppercase}}</h3>
+          <h5>{{pessoa.nis}}</h5>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-8 d-flex flex-column justify-content-center" style="height: 100vh; position: relative">
+      <div class="text-center pt-1 pb-3" style="position: absolute; top:10px; width: 95%">
+        <img src="/assets/logo-pmst.png" width="250px" alt="">
+      </div>
+      <button *ngIf="sorteados.length == pessoasApresentadas.length" routerLink="/" type="button" class="btn btn-success">Voltar para grupos</button>
+      <div class="text-center" *ngIf="pessoaAtual">
+        <h1 class="display-3 font-weight-bold">{{pessoaAtual.nome | uppercase}}</h1>
+        <h1 class="display-4 text-muted font-weight-bold">NIS: {{pessoaAtual.nis}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
